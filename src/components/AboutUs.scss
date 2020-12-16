@@ -1,0 +1,44 @@
+.about-us {
+    display: block;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.about-para {
+    text-align: left;
+    max-width: 90%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 50px;
+
+}
+
+
+.about-img {
+    width: 250%;
+    margin-left: 40px;
+    vertical-align: middle;
+    display: inline-block;
+}
+

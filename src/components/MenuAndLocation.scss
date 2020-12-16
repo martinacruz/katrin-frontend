@@ -1,0 +1,28 @@
+.MAL {
+    display: block;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MAL-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.MAL-para {
+    text-align: center;
+    max-width: 90%;
+}
