@@ -22,7 +22,6 @@ class event {
     //delete an event
     static delete = (id) => {
         const userId = localStorage.getItem('id')
-        console.log(userId)
         return fetch(`${url}/event/${userId}/${id}`, {
             method: "DELETE",
         }).then(res => {

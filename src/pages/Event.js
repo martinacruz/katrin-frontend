@@ -19,8 +19,10 @@ const Event = (props) => {
   }, [props])
 
   const handleDestroy = (id) => {
-    eventList.delete(id)
+    console.log(id)
+    event.delete(id)
       .then(data => {
+        console.log(data)
         fetchData()
       })
   }
@@ -32,7 +34,7 @@ const Event = (props) => {
       <h1><u>Events</u></h1>
       {eventList.map((event, idx) => {
         return (
-          <div>
+          <div key={ event.eventList} >
             <h3>{event.name}</h3>
             <p><strong>Loc:</strong> {event.location} </p>
             <p><strong>Date:</strong> {event.date} </p>
