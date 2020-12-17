@@ -5,19 +5,19 @@ class event {
         return fetch(`${url}/event/${userId}`).then(res => res.json())
     }
 
-    // // create new event
-    // static createEvent = () => {
-    //     const data = {
-    //         where: {
-    //             userId: localStorage.getItem('id'),
-    //             name: name,
-    //             date: date,
-    //             location: location,
-    //             time: time,
-    //             description: description,
-    //         }
-    //     }
-    // }
+    // create new event
+    static createEvent = (data) => {
+        return fetch(`${url}/event`, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            credentials: 'include'
+        })
+            .then(response => response.json())
+    }
+
 
     //delete an event
     static delete = (id) => {
@@ -28,7 +28,7 @@ class event {
             console.log(res)
             return res.json()
         })
-        .catch(console.error)
+            .catch(console.error)
     }
 }
 
