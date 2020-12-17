@@ -18,6 +18,19 @@ class event {
             .then(response => response.json())
     }
 
+    static editEvent = (id) => {
+        const userId = localStorage.getItem('id')
+        return fetch(`${url}/event/${userId}/${id}`, {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(id),
+            credentials: 'include'
+        })
+        .then(res => res.json)
+    }
+
 
     //delete an event
     static delete = (id) => {

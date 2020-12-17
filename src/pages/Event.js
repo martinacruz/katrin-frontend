@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import event from '../models/event'
+import { Link } from 'react-router-dom'
 
 const Event = (props) => {
 
@@ -70,7 +71,12 @@ const Event = (props) => {
             <p><strong>Time:</strong> {event.time}</p>
             <p><strong>Description:</strong> {event.description} </p>
             <button className="btn-danger" onClick={() => handleDestroy(event.id)}>Delete</button>
-            <button>Edit</button>
+            <Link to={{
+              pathname: `/editevent/${event.id}`,
+              state: event
+            }}>
+              <button>Edit</button>
+            </Link>
           </div>
         )
       })}
